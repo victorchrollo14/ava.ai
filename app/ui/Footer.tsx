@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaDiscord, FaFacebookMessenger, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+  FaDiscord,
+  FaFacebookMessenger,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
 import { MdMailOutline, MdOutlineMail, MdOutlinePhone } from "react-icons/md";
 
 export const Footer = () => {
@@ -19,7 +24,7 @@ export const Footer = () => {
   ];
   return (
     <footer className="mx-5 p-5">
-      <ul className="flex justify-between col-span-4">
+      <ul className="flex flex-col gap-5 sm:flex-row  flex-wrap justify-between">
         <li className="max-w-[420px]">
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -68,18 +73,18 @@ export const Footer = () => {
             Ava.ai
           </h1>
           <div className="flex items-center text-lg gap-3 ml-3">
-            <MdOutlinePhone className="w-6 h-6"/>
-            <Link href={'/'}>+91 94836 09845</Link>
+            <MdOutlinePhone className="w-6 h-6" />
+            <Link href={"/"}>+91 94836 09845</Link>
           </div>
           <div className="flex items-center text-lg gap-3 ml-3">
-            <MdMailOutline className="w-6 h-6"/>
-            <Link href={'/'}>gautham@ava.com</Link>
+            <MdMailOutline className="w-6 h-6" />
+            <Link href={"/"}>gautham@ava.com</Link>
           </div>
           <div className="other-socials flex gap-2 mt-5 ml-3 text-slate-400">
-            <FaDiscord className="w-8 h-8"/>
+            <FaDiscord className="w-8 h-8" />
             <FaInstagram className="w-8 h-8" />
-            <FaLinkedin className="w-8 h-8"/>
-            <FaFacebookMessenger className="w-8 h-8"/>
+            <FaLinkedin className="w-8 h-8" />
+            <FaFacebookMessenger className="w-8 h-8" />
           </div>
         </li>
       </ul>

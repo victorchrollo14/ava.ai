@@ -1,7 +1,7 @@
-import { url } from "inspector";
 import { Header } from "./ui/Header";
 import { Button } from "./ui/Button";
 import { Footer } from "./ui/Footer";
+import { About } from "./ui/About";
 
 export default function Home() {
   return (
@@ -25,6 +25,7 @@ export default function Home() {
           </Button>
         </div>
       </section>
+      <About />
       <Footer />
     </main>
   );
