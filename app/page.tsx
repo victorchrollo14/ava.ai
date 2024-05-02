@@ -2,6 +2,7 @@ import { Header } from "./ui/Header";
 import { Button } from "./ui/Button";
 import { Footer } from "./ui/Footer";
 import { About } from "./ui/About";
+import { Moreinfo } from "./ui/Moreinfo";
 
 export default function Home() {
   return (
@@ -25,7 +26,13 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <About />
+      <section
+        className="info bg-cover bg-no-repeat bg-center"
+        style={{ backgroundImage: 'url("/main-bg2.svg")' }}
+      >
+        <About />
+        <Moreinfo />
+      </section>
       <Footer />
     </main>
   );

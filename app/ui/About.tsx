@@ -4,8 +4,7 @@ import { Button } from "./Button";
 export const About = () => {
   return (
     <section
-      className="about-us-section flex justify-center h-[100vh] w-screen bg-cover bg-no-repeat"
-      style={{ backgroundImage: 'url("/background1.svg")' }}
+      className="about-us-section flex justify-center h-[90vh] w-screen "
     >
       <div className="about flex items-start mt-40 justify-items-start h-auto gap-10 max-w-5xl">
         <div className="image-part w-1/2 rounded-md">
