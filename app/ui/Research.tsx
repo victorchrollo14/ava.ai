@@ -38,7 +38,7 @@ export const Research = () => {
     },
   ];
   return (
-    <section className="mx-5">
+    <section className="min-h-screen mx-5">
       {" "}
       <h1 className="text-center font-bold text-8xl text-gray-300 opacity-20 pt-36">
         Our Research

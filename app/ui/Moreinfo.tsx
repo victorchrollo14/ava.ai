@@ -3,12 +3,12 @@ import { FaCircleUp } from "react-icons/fa6";
 
 export const Moreinfo = () => {
   return (
-    <section className="more-info-section  w-screen h-screen mx-10">
+    <section className="more-info-section  w-screen min-h-screen mx-10">
       <div className="more-info ">
         <h1 className="text-center font-bold text-8xl text-gray-300 opacity-20">
           How Ava.ai Can Help
         </h1>
-        <div className="more-info-des flex justify-between mt-40">
+        <div className="more-info-des flex flex-col items-center gap-10 lg:flex-row lg:justify-between mt-40">
           <div className="more-info-msg w-2/3">
             <p className="mb-2">Conversation & Emotional Support</p>
             <hr className="w-5/6 h-5" />
@@ -46,7 +46,7 @@ export const Moreinfo = () => {
               </div>
               <div className="border flex items-center justify-between border-white p-2 pl-5 mt-5 rounded-full ">
                 you got this right?
-                <FaCircleUp className="w-7 h-7"/>{" "}
+                <FaCircleUp className="w-7 h-7" />{" "}
               </div>
             </div>
           </div>

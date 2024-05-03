@@ -4,6 +4,7 @@ import { Footer } from "./ui/Footer";
 import { About } from "./ui/About";
 import { Moreinfo } from "./ui/Moreinfo";
 import { Research } from "./ui/Research";
+import { Join } from "./ui/Join";
 
 export default function Home() {
   return (
@@ -35,10 +36,11 @@ export default function Home() {
         <Moreinfo />
       </section>
       <section
-        className="research-section min-h-screen bg-auto bg-no-repeat bg-top"
+        className="research-section min-h-screen h-fit bg-auto bg-no-repeat bg-top"
         style={{ backgroundImage: 'url("/research-bg.svg")' }}
       >
         <Research />
+        <Join />
       </section>
       <Footer />
     </main>

@@ -4,9 +4,9 @@ import { Button } from "./Button";
 export const About = () => {
   return (
     <section
-      className="about-us-section flex justify-center h-[90vh] w-screen "
+      className="about-us-section flex justify-center min-h-[90vh]"
     >
-      <div className="about flex items-start mt-40 justify-items-start h-auto gap-10 max-w-5xl">
+      <div className="about flex flex-col md:flex-row items-center mt-40 justify-items-start h-auto gap-10 max-w-5xl">
         <div className="image-part w-1/2 rounded-md">
             <Image src={'/about-us-img.jpg'}  width={700} height={500} alt="AR glasses image" className="rounded-2xl" />
         </div>
