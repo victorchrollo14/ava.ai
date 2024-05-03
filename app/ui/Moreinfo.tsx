@@ -3,20 +3,20 @@ import { FaCircleUp } from "react-icons/fa6";
 
 export const Moreinfo = () => {
   return (
-    <section className="more-info-section w-screen h-screen mx-10">
+    <section className="more-info-section  w-screen h-screen mx-10">
       <div className="more-info ">
         <h1 className="text-center font-bold text-8xl text-gray-300 opacity-20">
           How Ava.ai Can Help
         </h1>
-        <div className="more-info-des flex mt-40">
-          <div className="more-info-msg w-7/12">
+        <div className="more-info-des flex justify-between mt-40">
+          <div className="more-info-msg w-2/3">
             <p className="mb-2">Conversation & Emotional Support</p>
             <hr className="w-5/6 h-5" />
             <h1 className="font-bold text-8xl mt-6">
               Talk to Ava about anything on your mind.
             </h1>
           </div>
-          <div className="card mt-8 w-5/12">
+          <div className="card mt-8  w-1/3">
             <div className="w-96 p-5 bg-white/[0.10]  rounded-xl rotate-12">
               <div className="chat-1 flex flex-row gap-4 mb-4">
                 <Image
