@@ -14,8 +14,8 @@ export const Button = ({
   return (
     <button
       className={clsx(
-        "text-black bg-white uppercase p-3 flex flex-row items-center gap-4 hover:text-white hover:bg-black transition-all ease-linear border hover:border-white",
-        className
+        "flex flex-row items-center gap-4 border bg-white p-3 uppercase text-black transition-all ease-linear hover:border-white hover:bg-black hover:text-white",
+        className,
       )}
     >
       {children}

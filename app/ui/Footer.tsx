@@ -24,7 +24,7 @@ export const Footer = () => {
   ];
   return (
     <footer className="mx-5 p-5">
-      <ul className="flex flex-col gap-5 sm:flex-row  flex-wrap justify-between">
+      <ul className="flex flex-col flex-wrap justify-between  gap-5 sm:flex-row">
         <li className="max-w-[420px]">
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -39,7 +39,7 @@ export const Footer = () => {
           </p>
         </li>
         <li className="flex flex-col gap-2">
-          <h1 className="text-2xl font-bold mb-1">Legal</h1>
+          <h1 className="mb-1 text-2xl font-bold">Legal</h1>
           {legal.map((item) => (
             <Link
               key={crypto.randomUUID()}
@@ -51,7 +51,7 @@ export const Footer = () => {
           ))}
         </li>
         <li className="flex flex-col gap-2">
-          <h1 className="text-2xl font-bold mb-1">Company</h1>
+          <h1 className="mb-1 text-2xl font-bold">Company</h1>
           {sitelinks.map((item) => (
             <Link
               key={crypto.randomUUID()}
@@ -72,19 +72,19 @@ export const Footer = () => {
             />{" "}
             Ava.ai
           </h1>
-          <div className="flex items-center text-lg gap-3 ml-3">
-            <MdOutlinePhone className="w-6 h-6" />
+          <div className="ml-3 flex items-center gap-3 text-lg">
+            <MdOutlinePhone className="h-6 w-6" />
             <Link href={"/"}>+91 94836 09845</Link>
           </div>
-          <div className="flex items-center text-lg gap-3 ml-3">
-            <MdMailOutline className="w-6 h-6" />
+          <div className="ml-3 flex items-center gap-3 text-lg">
+            <MdMailOutline className="h-6 w-6" />
             <Link href={"/"}>gautham@ava.com</Link>
           </div>
-          <div className="other-socials flex gap-2 mt-5 ml-3 text-slate-400">
-            <FaDiscord className="w-8 h-8" />
-            <FaInstagram className="w-8 h-8" />
-            <FaLinkedin className="w-8 h-8" />
-            <FaFacebookMessenger className="w-8 h-8" />
+          <div className="other-socials ml-3 mt-5 flex gap-2 text-slate-400">
+            <FaDiscord className="h-8 w-8" />
+            <FaInstagram className="h-8 w-8" />
+            <FaLinkedin className="h-8 w-8" />
+            <FaFacebookMessenger className="h-8 w-8" />
           </div>
         </li>
       </ul>

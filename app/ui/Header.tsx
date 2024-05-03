@@ -4,7 +4,7 @@ import { Button } from "./Button";
 
 export const Header = () => {
   return (
-    <header className="py-8 flex justify-between items-center mx-5">
+    <header className="mx-5 flex items-center justify-between py-8">
       <div className="logo flex items-center">
         <Image src={"/ava-logo.png"} width={56} height={56} alt="Ava.ai logo" />
         <h1 className="text-3xl font-bold">Ava.ai</h1>
@@ -22,7 +22,9 @@ export const Header = () => {
         <Link href={"/contact"} className="hover:text-purple-400">
           CONTACT US
         </Link>
-        <Button className="rounded-xl px-5" arrow={false}>SIGN UP</Button>
+        <Button className="rounded-xl px-5" arrow={false}>
+          SIGN UP
+        </Button>
       </nav>
     </header>
   );

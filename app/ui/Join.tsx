@@ -5,25 +5,25 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export const Join = () => {
   return (
-    <section className="min-h-[80vh] flex justify-center items-center">
+    <section className="flex min-h-[80vh] items-center justify-center">
       <div
-        className="join-program-section  bg-cover  bg-no-repeat  rounded-xl w-9/12 h-96"
+        className="join-program-section  h-96  w-9/12  rounded-xl bg-cover bg-no-repeat"
         style={{ backgroundImage: 'url("/join-bg.svg")' }}
       >
         <div className="join-program-data flex flex-col items-center">
-          <h1 className="text-5xl text-center font-bold mt-14 py-5 leading-snug">
+          <h1 className="mt-14 py-5 text-center text-5xl font-bold leading-snug">
             Join Our Beta Program in building the next big revolution in
             emotional intelligence.{" "}
           </h1>
-          <span className="flex border  w-9/12 justify-between py-2 border-b-2 border-gray-500 border-t-0 border-r-0 border-l-0 ">
+          <span className="flex w-9/12  justify-between border border-b-2 border-l-0 border-r-0 border-t-0 border-gray-500 py-2 ">
             <input
               type="text"
               name=""
               id=""
               placeholder="Email"
-              className="bg-transparent w-full outline-none text-lg"
+              className="w-full bg-transparent text-lg outline-none"
             />
-            <FaArrowRightLong className="w-5 h-auto text-gray-500" />
+            <FaArrowRightLong className="h-auto w-5 text-gray-500" />
           </span>
         </div>
       </div>

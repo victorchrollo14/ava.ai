@@ -38,9 +38,9 @@ export const Research = () => {
     },
   ];
   return (
-    <section className="min-h-screen mx-5">
+    <section className="mx-5 min-h-screen">
       {" "}
-      <h1 className="text-center font-bold text-8xl text-gray-300 opacity-20 pt-36">
+      <h1 className="pt-36 text-center text-8xl font-bold text-gray-300 opacity-20">
         Our Research
       </h1>
       <div className="research-cards mt-24 flex flex-wrap justify-center gap-9 rounded-sm">
