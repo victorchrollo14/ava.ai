@@ -22,21 +22,44 @@ export const Footer = () => {
     { link: "/solutions", data: "Solutions" },
     { link: "/research", data: "Research" },
   ];
+
+  const research = [
+    { link: "/", data: "overview" },
+    { link: "/index", data: "index" },
+  ];
+
+  const features = [
+    { link: "/", data: "Ava.ai" },
+    { link: "/", data: "Realtime avatars" },
+    { link: "/", data: "Marketplace" },
+    { link: "/", data: "Analytics" },
+  ];
   return (
-    <footer className="mx-5 p-5" id="footer">
-      <ul className="flex flex-col flex-wrap justify-between  gap-5 sm:flex-row">
-        <li className="max-w-[420px]">
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard dummy
-            text ever since the 1500s, when an unknown printer took a galley of
-            type and scrambled it to make a type specimen book. It has survived
-            not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum
-            passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
+    <footer className="mx-5 p-5  lg:mx-48" id="footer">
+      <ul className="flex  flex-col flex-wrap  justify-between gap-5 sm:flex-row">
+        <li className="flex  flex-col gap-2">
+          <h1 className="mb-1 text-2xl font-bold">Research</h1>
+          {research.map((item) => (
+            <Link
+              key={crypto.randomUUID()}
+              href={item.link}
+              className="text-lg hover:text-purple-400"
+            >
+              {item.data}
+            </Link>
+          ))}
+        </li>
+        <li className="flex flex-col gap-2">
+          <h1 className="mb-1 text-2xl font-bold">Features</h1>
+          {features.map((item) => (
+            <Link
+              key={crypto.randomUUID()}
+              href={item.link}
+              className="text-lg hover:text-purple-400"
+            >
+              {item.data}
+            </Link>
+          ))}
         </li>
         <li className="flex flex-col gap-2">
           <h1 className="mb-1 text-2xl font-bold">Legal</h1>
@@ -62,32 +85,20 @@ export const Footer = () => {
             </Link>
           ))}
         </li>
-        <li className="flex flex-col">
-          <h1 className="flex items-center text-2xl font-bold">
-            <Image
-              src={"/ava-logo.png"}
-              width={48}
-              height={48}
-              alt="Ava.ai Logo"
-            />{" "}
-            Ava.ai
-          </h1>
-          <div className="ml-3 flex items-center gap-3 text-lg">
-            <MdOutlinePhone className="h-6 w-6" />
-            <Link href={"/"}>+91 94836 09845</Link>
-          </div>
-          <div className="ml-3 flex items-center gap-3 text-lg">
-            <MdMailOutline className="h-6 w-6" />
-            <Link href={"/"}>gautham@ava.com</Link>
-          </div>
-          <div className="other-socials ml-3 mt-5 flex gap-2 text-slate-400">
-            <FaDiscord className="h-8 w-8" />
-            <FaInstagram className="h-8 w-8" />
-            <FaLinkedin className="h-8 w-8" />
-            <FaFacebookMessenger className="h-8 w-8" />
-          </div>
-        </li>
       </ul>
+      <div className="footer-ending mt-10 flex justify-between py-3  ">
+        <h1 className="flex items-center text-lg text-gray-300">
+          Ava.ai © 2024
+        </h1>
+        <div className="other-socials ml-3 mt-5 flex gap-10  ">
+          <FaDiscord className="h-5 w-5" />
+          <MdOutlinePhone className="h-5 w-5" />
+          <MdMailOutline className="h-5 w-5" />
+          <FaInstagram className="h-5 w-5" />
+          <FaLinkedin className="h-5 w-5" />
+          <FaFacebookMessenger className="h-5 w-5" />
+        </div>
+      </div>
     </footer>
   );
 };
