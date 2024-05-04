@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import { Card } from "./card";
-
+import { useRef } from "react";
+import { useScroll, motion, useTransform } from "framer-motion";
 export interface cardType {
   image: string;
   heading: string;
@@ -37,17 +39,30 @@ export const Research = () => {
       author: "Jayesh P",
     },
   ];
+
+  const ref4 = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref4,
+    offset: ["0 1", "1.33 1"],
+  });
+
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
   return (
-    <section className="mx-5 min-h-screen">
-      {" "}
-      <h1 className="pt-36 text-center text-8xl font-bold text-gray-300 opacity-20">
-        Our Research
-      </h1>
-      <div className="research-cards mt-24 flex flex-wrap justify-center gap-9 rounded-sm">
-        {cards.map((card) => (
-          <Card key={crypto.randomUUID()} card={card} />
-        ))}
-      </div>
+    <section className="mx-5 min-h-screen" id="research">
+      <motion.div
+        ref={ref4}
+        style={{ scale: scaleProgress, opacity: scaleProgress }}
+      >
+        {" "}
+        <h1 className="pt-36 text-center text-8xl font-bold text-gray-300 opacity-20">
+          Our Research
+        </h1>
+        <div className="research-cards mt-24 flex flex-wrap justify-center gap-9 rounded-sm">
+          {cards.map((card) => (
+            <Card key={crypto.randomUUID()} card={card} />
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 };

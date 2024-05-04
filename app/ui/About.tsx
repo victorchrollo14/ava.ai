@@ -1,10 +1,26 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "./Button";
+import { useScroll, motion, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export const About = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+
   return (
-    <section className="about-us-section flex min-h-[90vh] justify-center">
-      <div className="about mt-40 flex h-auto max-w-5xl flex-col items-center justify-items-start gap-10 md:flex-row">
+    <section className="about-us-section flex min-h-[80vh] justify-center">
+      <motion.div
+        className="about mt-40 flex h-auto max-w-5xl flex-col items-center justify-items-start gap-10 md:flex-row"
+        ref={ref}
+        style={{ scale: scaleProgress, opacity: scaleProgress }}
+      >
         <div className="image-part w-1/2 rounded-md">
           <Image
             src={"/about-us-img.jpg"}
@@ -31,7 +47,7 @@ export const About = () => {
             Know More
           </Button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

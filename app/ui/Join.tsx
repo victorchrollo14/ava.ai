@@ -1,14 +1,28 @@
-import Image from "next/image";
-import { BiArrowToRight } from "react-icons/bi";
-import { FaArrowRight } from "react-icons/fa";
+"use client";
+
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useRef } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
 
 export const Join = () => {
+  const ref2 = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref2,
+    offset: ["0 1", "1.33 1"],
+  });
+
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+
   return (
     <section className="flex min-h-[80vh] items-center justify-center">
-      <div
+      <motion.div
         className="join-program-section  h-96  w-9/12  rounded-xl bg-cover bg-no-repeat"
-        style={{ backgroundImage: 'url("/join-bg.svg")' }}
+        style={{
+          backgroundImage: 'url("/join-bg.svg")',
+          scale: scaleProgress,
+          opacity: scaleProgress,
+        }}
+        ref={ref2}
       >
         <div className="join-program-data flex flex-col items-center">
           <h1 className="mt-14 py-5 text-center text-5xl font-bold leading-snug">
@@ -26,7 +40,7 @@ export const Join = () => {
             <FaArrowRightLong className="h-auto w-5 text-gray-500" />
           </span>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

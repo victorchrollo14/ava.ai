@@ -23,7 +23,7 @@ export const Footer = () => {
     { link: "/research", data: "Research" },
   ];
   return (
-    <footer className="mx-5 p-5">
+    <footer className="mx-5 p-5" id="footer">
       <ul className="flex flex-col flex-wrap justify-between  gap-5 sm:flex-row">
         <li className="max-w-[420px]">
           <p>

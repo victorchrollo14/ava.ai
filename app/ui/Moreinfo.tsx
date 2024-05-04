@@ -1,17 +1,35 @@
+"use client";
+
 import Image from "next/image";
 import { FaCircleUp } from "react-icons/fa6";
+import { useRef } from "react";
+import { useScroll, motion, useTransform } from "framer-motion";
 
 export const Moreinfo = () => {
+  const ref1 = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref1,
+    offset: ["0 1", "1.33 1"],
+  });
+
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
   return (
-    <section className="more-info-section  mx-10 min-h-screen w-screen">
-      <div className="more-info ">
+    <section
+      className="more-info-section   mt-40 min-h-screen w-screen"
+      id="solutions"
+    >
+      <motion.div
+        className="more-info "
+        ref={ref1}
+        style={{ scale: scaleProgress, opacity: scaleProgress }}
+      >
         <h1 className="text-center text-8xl font-bold text-gray-300 opacity-20">
           How Ava.ai Can Help
         </h1>
-        <div className="more-info-des mt-40 flex flex-col items-center gap-10 lg:flex-row lg:justify-between">
+        <div className="more-info-des mx-10 mt-40 flex flex-col items-center gap-10 lg:flex-row lg:justify-between">
           <div className="more-info-msg w-2/3">
             <p className="mb-2">Conversation & Emotional Support</p>
-            <hr className="h-5 w-5/6" />
+            <hr className="h-2 w-5/6" />
             <h1 className="mt-6 text-8xl font-bold">
               Talk to Ava about anything on your mind.
             </h1>
@@ -51,7 +69,7 @@ export const Moreinfo = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
