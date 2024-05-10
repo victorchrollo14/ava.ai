@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Card } from "./card";
 import { useRef } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
+
 export interface cardType {
   image: string;
   heading: string;

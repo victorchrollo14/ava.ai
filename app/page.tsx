@@ -1,11 +1,11 @@
 "use client";
-import { Header } from "./ui/Header";
-import { Button } from "./ui/Button";
-import { Footer } from "./ui/Footer";
-import { About } from "./ui/About";
-import { Moreinfo } from "./ui/Moreinfo";
-import { Research } from "./ui/Research";
-import { Join } from "./ui/Join";
+import { Header } from "@ui/Header";
+import { Button } from "@ui/Button";
+import { Footer } from "@ui/Footer";
+import { About } from "@ui/landing/About";
+import { Moreinfo } from "@ui/landing/Moreinfo";
+import { Research } from "@ui/landing/Research";
+import { Join } from "@ui/landing/Join";
 import { motion } from "framer-motion";
 
 export default function Home() {

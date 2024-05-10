@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./Button";
+import { useRouter } from "next/router";
 
 export const Header = () => {
   return (
-    <header className="mx-5 flex items-center justify-between py-8">
+    <header className=" mx-5 flex items-center justify-between py-8">
       <div className="logo flex items-center">
         <Image
           src={"/ava-logo-removebg.png"}
