@@ -27,15 +27,15 @@ export default function Home() {
           exit={{ opacity: 1, y: "80%" }}
           transition={{ duration: 0.5, ease: "linear" }}
         >
-          <h1 className="text-center text-8xl font-bold">
+          <h1 className="text-center text-white-400  text-8xl font-bold">
             Feeling Alone? <br />{" "}
             <span className="text-purple-400">Ava.ai</span> is here for you
           </h1>
-          <h3 className="max-w-[720px] text-center text-lg">
+          <h3 className="max-w-[720px] text-white text-center text-lg">
             Your friendly AI companion that listens, supports, and empowers you
             on your journey to mental well-being.
           </h3>
-          <Button className="rounded-full px-8 font-semibold" arrow={true}>
+          <Button className="rounded-full px-8 font-semibold text-white" arrow={true}>
             get started
           </Button>
         </motion.div>
