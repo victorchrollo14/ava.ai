@@ -1,6 +1,6 @@
 "use client";
 import { Header } from "@ui/Header";
-import { Button } from "@ui/Button";
+import { Button } from "@ui/button/Button";
 import { Footer } from "@ui/Footer";
 import { About } from "@ui/landing/About";
 import { Moreinfo } from "@ui/landing/Moreinfo";
@@ -8,7 +8,11 @@ import { Research } from "@ui/landing/Research";
 import { Join } from "@ui/landing/Join";
 import { motion } from "framer-motion";
 
+import { useRouter } from "next/navigation";
+
 export default function Home() {
+  const router = useRouter();
+
   return (
     <main className="">
       <motion.section
@@ -27,15 +31,22 @@ export default function Home() {
           exit={{ opacity: 1, y: "80%" }}
           transition={{ duration: 0.5, ease: "linear" }}
         >
-          <h1 className="text-center text-white-400  text-8xl font-bold">
+          <h1 className="text-white-400 text-center  text-8xl font-bold">
             Feeling Alone? <br />{" "}
             <span className="text-purple-400">Ava.ai</span> is here for you
           </h1>
-          <h3 className="max-w-[720px] text-white text-center text-lg">
+          <h3 className="max-w-[720px] text-center text-lg text-white">
             Your friendly AI companion that listens, supports, and empowers you
             on your journey to mental well-being.
           </h3>
-          <Button className="rounded-full px-8 font-semibold text-white" arrow={true}>
+          <Button
+            type="button"
+            className="rounded-full px-8 font-semibold"
+            arrow={true}
+            onClick={() => {
+              router.push("/auth/register");
+            }}
+          >
             get started
           </Button>
         </motion.div>

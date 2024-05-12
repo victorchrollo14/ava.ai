@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "./Button";
-import { useRouter } from "next/router";
+import { Button } from "@ui/button/Button";
+import { useRouter } from "next/navigation";
 
 export const Header = () => {
+  const router = useRouter();
   return (
     <header className=" mx-5 flex items-center justify-between py-8">
       <div className="logo flex items-center">
@@ -29,7 +30,11 @@ export const Header = () => {
           COMPANY
         </Link>
       </nav>
-      <Button className="rounded-xl px-5 normal-case" arrow={false}>
+      <Button
+        className="rounded-xl px-5 normal-case"
+        arrow={false}
+        onClick={() => router.push("/auth/register")}
+      >
         Try Ava
       </Button>
     </header>
