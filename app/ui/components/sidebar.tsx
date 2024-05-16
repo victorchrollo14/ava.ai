@@ -9,7 +9,7 @@ import { PiChatDots, PiChatDotsLight } from "react-icons/pi";
 export function Sidebar() {
   return (
     <div className="flex h-[95vh] w-72 flex-col  rounded-2xl bg-black">
-      <div className="flex h-20 items-center  px-6 ">
+      <div className="flex h-20 items-center px-6 ">
         <div className="flex items-center gap-2">
           <Link href={"/"} className="logo flex items-center">
             <Image
@@ -22,13 +22,12 @@ export function Sidebar() {
           <span className="text-xl font-semibold text-white">Ava.ai</span>
         </div>
       </div>
-      <Button
-        arrow={false}
-        className="mx-6 mt-4 rounded-full bg-purple-500 px-4 py-2 text-white"
+      <button
+        className="flex items-center mx-6 mt-4 rounded-full bg-purple-500 px-4 py-2 text-white"
       >
         <PlusIcon className="mr-2 h-4 w-4" />
         New Chat
-      </Button>
+      </button>
       <div className="mt-8 flex items-center justify-between border-b border-t border-[#333333] px-6 py-2">
         <h3 className="text-sm font-semibold text-white">Your Conversations</h3>
         <button className="text-sm text-gray-400 hover:text-[#6B46C1]">
