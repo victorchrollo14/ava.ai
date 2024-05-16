@@ -14,7 +14,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <main className="">
+    <main className="text-sm">
       <motion.section
         className="hero-section min-h-screen w-screen bg-black bg-opacity-50 bg-cover bg-fixed bg-center"
         style={{ backgroundImage: 'url("/hero-image.jpg")' }}
