@@ -14,7 +14,7 @@ export const Button = ({
   return (
     <button
       className={clsx(
-        "flex flex-row items-center gap-4 border bg-white p-3 uppercase text-black/100 transition-all ease-linear hover:border-white hover:bg-black hover:text-white",
+        "flex flex-row items-center gap-4 border bg-white p-3 text-center uppercase text-black/100 transition-all ease-linear hover:border-white hover:bg-black hover:text-white",
         className,
       )}
       type="button"

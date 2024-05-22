@@ -26,7 +26,7 @@ const Chat = ({ params }: { params: params }) => {
     e.preventDefault();
     try {
       console.log(query);
-      const response = await fetch("http://localhost:3001/api/v1/gpt", {
+      const response = await fetch("http://localhost:3000/api/v1/gpt", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
