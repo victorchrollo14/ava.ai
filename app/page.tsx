@@ -1,4 +1,5 @@
 "use client";
+
 import { Header } from "@ui/Header";
 import { Button } from "@ui/button/Button";
 import { Footer } from "@ui/Footer";
@@ -16,43 +17,54 @@ export default function Home() {
   return (
     <main className="text-sm">
       <motion.section
-        className="hero-section min-h-screen w-screen bg-black bg-opacity-50 bg-cover bg-fixed bg-center"
-        style={{ backgroundImage: 'url("/hero-image.jpg")' }}
+        className="hero-section min-h-screen w-screen bg-black  bg-cover bg-fixed bg-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeIn" }}
       >
-        <Header />
-        <motion.div
-          className="hero  mt-32 flex flex-col items-center gap-5"
-          initial={{ y: "80%" }}
-          animate={{ y: "0%" }}
-          exit={{ opacity: 1, y: "80%" }}
-          transition={{ duration: 0.5, ease: "linear" }}
+        {" "}
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute left-0 top-0 h-full w-full object-cover"
         >
-          <h1 className="text-white-400 text-center  text-8xl font-bold">
-            Feeling Alone? <br />{" "}
-            <span className="text-purple-400">Ava.ai</span> is here for you
-          </h1>
-          <h3 className="max-w-[720px] text-center text-lg text-white">
-            Your friendly AI companion that listens, supports, and empowers you
-            on your journey to mental well-being.
-          </h3>
-          <Button
-            type="button"
-            className="rounded-full px-8 font-semibold"
-            arrow={true}
-            onClick={() => {
-              router.push("/auth/register");
-            }}
+          <source src="/landing-vid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="relative z-10 min-h-screen bg-black bg-opacity-50">
+          <Header />
+          <motion.div
+            className="hero  mt-32 flex flex-col items-center gap-5"
+            initial={{ y: "80%" }}
+            animate={{ y: "0%" }}
+            exit={{ opacity: 1, y: "80%" }}
+            transition={{ duration: 0.5, ease: "linear" }}
           >
-            get started
-          </Button>
-        </motion.div>
+            <h1 className="text-white-400 text-center  text-8xl font-bold">
+              Feeling Alone? <br />{" "}
+              <span className="text-purple-400">Ava.ai</span> is here for you
+            </h1>
+            <h3 className="max-w-[720px] text-center text-lg text-white">
+              Your friendly AI companion that listens, supports, and empowers
+              you on your journey to mental well-being.
+            </h3>
+            <Button
+              type="button"
+              className="rounded-full px-8 font-semibold"
+              arrow={true}
+              onClick={() => {
+                router.push("/auth/register");
+              }}
+            >
+              get started
+            </Button>
+          </motion.div>
+        </div>
       </motion.section>
       <section
-        className="info bg-cover bg-top-10 bg-no-repeat"
+        className="info bg-cover bg-fixed bg-top-10 bg-no-repeat"
         style={{ backgroundImage: 'url("/gradient-bg.svg")' }}
       >
         <About />
