@@ -35,7 +35,7 @@ export const Footer = () => {
     { link: "/", data: "Analytics" },
   ];
   return (
-    <footer className="mx-5 p-5  lg:mx-48" id="footer">
+    <footer className="mx-5   p-5  lg:mx-48" id="footer">
       <ul className="flex  flex-col flex-wrap  justify-between gap-5 sm:flex-row">
         <li className="flex  flex-col gap-2">
           <h1 className="mb-1 text-2xl font-bold">Research</h1>
